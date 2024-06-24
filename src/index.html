@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <script src="script.js"></script>
+</head>
+<body class="bg-black">
+    <h1 class="text-4xl font-bold text-white text-center mt-10">
+        Number Guessing Game
+    </h1>
+    <h3 class="text-xl text-white text-center mt-3">
+        Try and guess a random number between 1 and 100.
+    </h3>
+    <h3 class="text-xl text-white text-center mt-3">
+        You have 10 attempts to guess the right number.
+    </h3>
+    <div class="flex justify-center items-center mt-14">
+        <div id="changeHeight" class="h-72 w-1/3 flex justify-center items-center bg-gray-600 rounded-xl">
+            <form> 
+                <h1 class="text-4xl font-semibold text-center text-white m-5">
+                    Guess a number
+                </h1>
+                <div class="flex justify-center items-center">
+                    <input type="number" id="userGuess" placeholder="Enter a Number"
+                    class="rounded-lg py-1.5 pl-4 m-3 outline-none
+                    [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"> 
+                </div>
+                <div class="flex justify-center items-center">
+                    <button type="button" id="submit"
+                    class="rounded-lg bg-gray-400 px-4 py-1 m-3 hover:bg-gray-300">
+                        Submit Guess
+                    </button>
+                </div>
+                <div id="hmm">
+                    <p class="text-center m-2">
+                        Previous Guesses: 
+                        <span id="previousGuess">
+                        </span>
+                    </p>
+                    <p class="text-center m-2">
+                        Guesses Remaining:
+                        <span id="remainingGuess">
+                            10
+                        </span>
+                    </p>
+                    <p id="numberLowOrHigh" class="text-center"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
