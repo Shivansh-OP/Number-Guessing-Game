@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (playGame) {
         document.addEventListener('submit', (e) => {
             e.preventDefault() 
-            const guess = userGuess.value
+            const guess = parseInt(userGuess.value)
             validateGuess(guess)
         })
     }
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function checkGuess(guess) {
         if (guess === randomGuess){
-            displayMessage(`You Guessed it Right :)`);
+            displayMessage(`You Guessed it Right!! Number is ${randomGuess} :)`);
             endGame();
         }
         else if (guess < randomGuess) {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function displayMessage(message) {
-        changeHeight.classList.add("h-80")
+        changeHeight.classList.add("md:h-80")
         numberLowOrHigh.innerHTML = `${message}`;
     }
     
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         p.classList.add('button');
         p.innerHTML =
         `
-            <h2 id="startNewGame" class="flex justify-center items-center text-white cursor-pointer">
+            <h2 id="startNewGame" class="flex justify-center items-center text-white font-bold mb-5 cursor-pointer">
                 Start a New Game
             </h2>
         `;
